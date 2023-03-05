@@ -7,7 +7,7 @@
     --clr-primary-500: hsl(340, 66%, 47%);
     --clr-secondary-500: hsl(240, 60%, 63%);
 
-    --clr-neutral-900: hsl(220, 3%, 20%);
+    --clr-neutral-900: hsl(225, 4%, 20%);
     --clr-neutral-700: hsl(220, 3%, 20%);
     --clr-neutral-500: hsl(196, 4%, 60%);
     --clr-neutral-300: hsl(190, 5%, 80%);
@@ -91,14 +91,59 @@
     stroke-width: 1;
   }
 
-.super-header {
+  .max-wrapper {
+    max-width: 1440px;
+    padding-inline: 20px;
+    margin-inline: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .img-button {
+    background: none;
+    border: none;
+    color: inherit;
+  }
+
+.header {
     background-color: var(--clr-neutral-900);
-    color: var(--clr-white);
+    color: var(--clr-neutral-300);
     font-size: var(--fs-100);
+}
+
+.super-header {
     display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 20px;
+}
+
+.super-header p {
+    color: var(--clr-white);
+}
+
+.super-header a {
+    color: inherit;
+    text-transform: capitalize;
 }
 
 .header-search {
     display: flex;
     margin-left: auto;
+    border-bottom: 1px solid var(--clr-neutral-300);
 }
+
+.header-search input {
+    background: none;
+    border: none;
+    margin-left: 8px;
+    width: 150px;
+    color: inherit;
+}
+
+.header-search input::placeholder {
+    color: var(--clr-neutral-500);
+    text-transform: capitalize;
+  }
