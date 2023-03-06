@@ -84,6 +84,7 @@
 
   body {
     font-family: 'Raleway', sans-serif;
+    font-weight: var(--fw-normal)
   }
 
   a {
@@ -170,14 +171,18 @@
     gap: 48px;
   }
 
-  .main-navigation a {
+  .nav-link {
     text-transform: uppercase;
     font-weight: var(--fw-medium);
     font-size: var(--fs-300);
   }
-  .logo, .main-navigation a {
+
+  .logo, .nav-link {
     color: inherit;
   }
+.nav-call-out {
+    color: var(--clr-secondary-500);
+}
   .logo h1 {
     color: inherit;
     font-size: 1.5rem;
@@ -197,13 +202,14 @@
  }
 
  .site-main-content {
-    background-color: beige;
+    /* background-color: beige; */
     height: 500px;
     flex: 1;
  }
 
  .bread-crumbs {
-    margin-bottom: 42px;
+    padding-top: 10px;
+    padding-bottom: 39px;
  }
 
  .bread-crumbs ul {
@@ -242,4 +248,89 @@
     font-weight: var(--fw-medium);
     text-transform: capitalize;
     margin-bottom: 10px;
+ }
+
+ .page-title {
+    margin-bottom: 42px;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-medium);
+ }
+
+ .product-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+ }
+
+ .product-info {
+    position: relative;
+    isolation: isolate;
+ }
+
+ .released {
+    --bg-color: var(--clr-secondary-500);
+    --fg-color: var(var(--clr-white));
+ }
+
+ .sale {
+    --bg-color: var(--clr-primary-500);
+    --fg-color: var(var(--clr-white));
+ }
+
+ .product-link {
+    display: block;
+    color: var(--clr-neutral-900);
+    flex: 1;
+    min-width: 275px;
+ }
+
+ .product-image {
+    margin-bottom: 15px;
+ }
+
+ .product-image div {
+    position: absolute;
+    background-color: var(--bg-color);
+    color: var(--fg-color, white);
+    font-size: var(--fs-100);
+    font-weight: var(--fw-bold);
+    padding-inline: 10px;
+    padding-block: 8px;
+    border-radius: 2px;
+    right: -4px;
+    top: 12px;
+ }
+
+ .product-image img {
+    border-radius: 16px 16px 4px 4px;
+ }
+
+ .product-name {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-200);
+ }
+ .product-colors {
+    color: var(--clr-neutral-700);
+ }
+ .product-row {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .product-content-header {
+    display: flex;
+    align-items: baseline;
+ }
+ .product-filters {
+    margin-left: auto;
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+ }
+
+ .filter-select {
+    padding: 12px;
+    background: var(--clr-neutral-100);
+    border: none;
+    border-radius: 10px;
  }
