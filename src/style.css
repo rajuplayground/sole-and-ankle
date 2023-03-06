@@ -100,6 +100,10 @@
     color: inherit;
   }
 
+  .site-header {
+    margin-bottom: 64px;
+  }
+
 .super-header {
     display: flex;
     height: 40px;
@@ -147,6 +151,7 @@
     padding-inline: 32px;
     border-bottom: 1px solid var(--clr-neutral-300);
     color: var(--clr-neutral-900);
+    height: 72px;
   }
 
   .header-side{
@@ -178,3 +183,46 @@
     font-size: 1.5rem;
     font-weight: 800;
   }
+
+  .site-main {
+    display: flex;
+    padding-inline: 32px;
+    flex-direction: row-reverse;
+  }
+
+ .site-sidebar {
+    height: 300px;
+    flex-basis: 248px;
+ }
+
+ .site-main-content {
+    background-color: beige;
+    height: 500px;
+    flex: 1;
+ }
+
+ .bread-crumbs ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    color: var(--clr-neutral-700);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+ }
+
+ .bread-crumbs li {
+    margin-right: 8px;
+ }
+
+ .bread-crumbs li:not(:first-of-type):before{
+    content: "/";
+    display: inline-block;
+    margin-right: 8px;
+    color: var(--clr-neutral-300);
+ }
+
+ .bread-crumbs a {
+    color: inherit;
+    font-size: var(--fs-100);
+    text-transform: capitalize;
+ }
