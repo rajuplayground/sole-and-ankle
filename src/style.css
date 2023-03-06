@@ -193,12 +193,17 @@
  .site-sidebar {
     height: 300px;
     flex-basis: 248px;
+    max-width: 248px;
  }
 
  .site-main-content {
     background-color: beige;
     height: 500px;
     flex: 1;
+ }
+
+ .bread-crumbs {
+    margin-bottom: 42px;
  }
 
  .bread-crumbs ul {
@@ -225,4 +230,16 @@
     color: inherit;
     font-size: var(--fs-100);
     text-transform: capitalize;
+ }
+
+ .side-filter {
+    color: var(--clr-neutral-900);
+ }
+
+ .side-filter a {
+    display: block;
+    color: inherit;
+    font-weight: var(--fw-medium);
+    text-transform: capitalize;
+    margin-bottom: 10px;
  }
