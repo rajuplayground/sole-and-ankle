@@ -85,6 +85,7 @@
     isolation: isolate;
   }
 
+  /* html, body {margin: 0; height: 100%; overflow: hidden} */
 
   body {
     font-family: 'Raleway', sans-serif;
@@ -96,17 +97,13 @@
   }
 
   .feather {
-    stroke-width: 1;
+    stroke-width: 2;
   }
 
   .img-button {
     background: none;
     border: none;
     color: inherit;
-  }
-
-  .site-header {
-    margin-bottom: 64px;
   }
 
 .super-header {
@@ -165,12 +162,22 @@
     height: 72px;
   }
 
+  @media(max-width: 37.5rem){
+    .main-header {
+        padding-inline: 16px;
+    }
+  }
+
   .header-side{
     flex: 1;
   }
 
-  .main-navigation {
-    margin-inline: auto;
+  .close-button {
+    display: none;
+  }
+
+  .main-nav-footer {
+    display: none;
   }
 
   .main-navigation ul {
@@ -199,9 +206,62 @@
     font-weight: 800;
   }
 
+  [data-menu="false"]{
+    display: none !important;
+  }
+
+  flenu-bar {
+    display: none;
+  }
+
+  @media(max-width: 59.375rem){
+    .main-navigation{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: hsla(225, 4%, 20%, 0.5);
+        z-index: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navigation-wrapper{
+        background-color: var(--clr-white);
+        padding: 30px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .main-navigation ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: auto;
+    }
+    .main-nav-footer{
+        margin-top: auto;
+        display: revert;
+    }
+    .main-nav-footer a {
+        display: block;
+        text-transform: capitalize;
+    }
+    .close-button{
+        display: revert;
+        text-align: end;
+        margin-right: -10px;
+    }
+    .mobile-menu-bar {
+        display: flex;
+        flex: 0 0 fit-content;
+        gap: 32px;
+    }
+  }
+
   .site-main {
     display: flex;
-    padding-inline: 32px;
+    padding: 64px 32px;
     flex-direction: row-reverse;
     align-items: baseline;
   }
@@ -215,7 +275,17 @@
     .site-sidebar {
         display: none;
     }
+    .site-main {
+        padding: 48px 32px;
+      }
 }
+
+@media(max-width: 37.5rem){
+    .site-main {
+        padding: 48px 16px;
+    }
+  }
+
 
  .site-main-content {
     flex: 1;
@@ -360,6 +430,12 @@
     align-items: baseline;
     gap: 20px;
  }
+
+ @media(max-width: 37.5rem){
+    .product-filters {
+        display: none;
+    }
+  }
 
  .filter-select {
     padding: 12px;
