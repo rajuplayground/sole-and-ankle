@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Vite App</title>
-    <script defer type="module" src="/main.js"></script>
+    <script defer src="/main.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -32,10 +33,10 @@
                     <h1>Sole&Ankle</h1>
                 </a>
             </div>
-            <nav class="main-navigation" data-menu="true">
+            <nav id="main-navigation" class="main-navigation" data-menu="close">
                 <div class="navigation-wrapper">
-                    <div class="menu-actions"><i class="menu-close" data-feather="x"
-                            style="width: 24px; aspect-ratio: 1;"></i></div>
+                    <button id="nav-close-btn" class="menu-actions img-button"><i class="menu-close" data-feather="x"
+                            style="width: 24px; aspect-ratio: 1;"></i></button>
                     <ul>
                         <li><a href="#" class="nav-link nav-call-out">Sale</a></li>
                         <li><a href="#" class="nav-link">New Releases</a></li>
@@ -54,9 +55,11 @@
             <div class="header-side">
             </div>
             <div class="mobile-menu-bar">
-                <i data-feather="shopping-bag" style="width: 24px; aspect-ratio: 1;"></i>
-                <i data-feather="search" style="width: 24px; aspect-ratio: 1;"></i>
-                <i data-feather="menu" style="width: 24px; aspect-ratio: 1;"></i>
+                <button class="img-button"><i data-feather="shopping-bag"
+                        style="width: 24px; aspect-ratio: 1;"></i></button>
+                <button class="img-button"><i data-feather="search" style="width: 24px; aspect-ratio: 1;"></i></button>
+                <button id="nav-open-btn" class="img-button"><i data-feather="menu"
+                        style="width: 24px; aspect-ratio: 1;"></i></button>
             </div>
         </div>
     </header>

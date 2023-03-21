@@ -104,6 +104,7 @@
     background: none;
     border: none;
     color: inherit;
+    cursor: pointer;
   }
 
 .super-header {
@@ -206,7 +207,7 @@
     font-weight: 800;
   }
 
-  [data-menu="false"]{
+  [data-menu="close"]{
     display: none !important;
   }
 
@@ -357,9 +358,9 @@
  }
 
  .product-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
  }
 
  .product-info {
